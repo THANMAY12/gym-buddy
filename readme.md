@@ -145,7 +145,7 @@ REACT_APP_API_URL=http://localhost:4000
 
 npm install
 
-Run backend:
+Run frontend:
 npm start
 
 ```
