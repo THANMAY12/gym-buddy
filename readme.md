@@ -4,6 +4,10 @@
 Gym Buddy is a full-stack MERN (MongoDB, Express, React, Node.js) application that allows users to securely track and manage their workout routines. Users can create, view, update, and delete workouts while maintaining a personalized and authenticated experience.
 
 ---
+## Live Demo
+
+Frontend: https://gym-buddy-1.netlify.app  
+Backend API: https://gym-buddy-joya.onrender.com
 
 ## Overview
 
@@ -60,24 +64,26 @@ This project demonstrates a complete full-stack architecture with authentication
 
 ```
 
+## Project Structure
+
+
 Gym Buddy/
 ├── backend/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── server.js
-│   └── .env
+│ ├── controllers/
+│ ├── middleware/
+│ ├── models/
+│ ├── routes/
+│ ├── server.js
+│ └── .env
 │
 └── frontend/
 ├── src/
-│   ├── components/
-│   ├── context/
-│   ├── hooks/
-│   ├── pages/
-│   ├── App.js
-│   └── index.js
-
+│ ├── components/
+│ ├── context/
+│ ├── hooks/
+│ ├── pages/
+│ ├── App.js
+│ └── index.js
 ```
 
 ---
@@ -105,9 +111,11 @@ Create a `.env` file:
 
 ```
 
-PORT=4000
-MONGO_DB_URL=your_mongodb_connection_string
-JWTSECRET=your_secret_key
+### Backend (.env)
+PORT=10000  
+MONGO_DB_URL=your_mongodb_connection_string  
+JWTSECRET=your_secret_key 
+CLIENT_URL=http://localhost:3000
 
 ```
 
@@ -126,7 +134,18 @@ npm run dev
 ```
 
 cd frontend
+
+Create a `.env` file:
+
+```
+### Frontend (.env)
+REACT_APP_API_URL=http://localhost:4000
+
+```
+
 npm install
+
+Run backend:
 npm start
 
 ```
@@ -188,19 +207,18 @@ Authorization: Bearer <token>
 - createdAt, updatedAt (timestamps)  
 
 ---
+## Deployment
 
-## Deployment Notes
+- Frontend is deployed on Netlify  
+- Backend is deployed on Render  
 
-- Use environment variables for secrets  
-- Replace proxy with backend URL  
-- Configure CORS for production  
-- Use strong JWT secret  
-- Increase bcrypt salt rounds for production  
+### Notes
+- Frontend uses REACT_APP_API_URL to connect to backend  
+- CORS is configured to allow frontend domain  
+- Proxy is used only for local development  
 
----
 
 ## Future Improvements
-
 - Edit workout UI  
 - Search and filtering  
 - Analytics dashboard  
