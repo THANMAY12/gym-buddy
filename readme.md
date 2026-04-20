@@ -228,5 +228,10 @@ Authorization: Bearer <token>
 ---
 
 ## Author
+## Author
+
+Thanmay Gowda B J  
+GitHub: https://github.com/THANMAY12  
+LinkedIn: https://www.linkedin.com/in/thanmay-gowda-b-j 
 
 Built as part of a full-stack MERN learning project.
